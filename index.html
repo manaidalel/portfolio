@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalel MANAI - Geophysicist & Structural Geologist</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a2530 100%);
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+        
+        .publication-item, .conference-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .publication-title {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--secondary-color);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .interest-badge {
+            background-color: var(--secondary-color);
+            color: white;
+            margin: 5px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dalel MANAI, PhD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Placeholder for profile image - replace with actual image -->
+                    <div class="mb-4">
+                        <i class="fas fa-user-circle fa-8x"></i>
+                    </div>
+                    <h1 class="display-4 fw-bold">Dalel MANAI</h1>
+                    <h2 class="h3 mb-4">Geophysicist & Structural Geologist</h2>
+                    <p class="lead mb-4">Seeking a postdoctoral position in geodynamics, basin analysis, and applied geophysics</p>
+                    <div class="contact-info">
+                        <p class="mb-1">
+                            <i class="fas fa-map-marker-alt me-2"></i>Tunis, Tunisia
+                        </p>
+                        <p class="mb-1">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:daleI.manai@fst.utm.tn">daleI.manai@fst.utm.tn</a>
+                        </p>
+                        <p class="mb-1">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+21623947732">+216 23 947 732</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-linkedin me-2"></i>
+                            <a href="https://linkedin.com/in/daleI-manai-0799a658" target="_blank">LinkedIn Profile</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Professional Profile</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead">Geophysicist and Structural Geologist with a strong background in seismic and gravity data interpretation, basin analysis, and structural modeling. Experienced in applied research across international settings (Germany, Spain, Morocco, Tunisia).</p>
+                    <p>Seeking a <strong>postdoctoral position</strong> to further contribute to geodynamic and subsurface exploration projects.</p>
+                    
+                    <div class="mt-4">
+                        <h4 class="mb-3">Postdoc Research Interests</h4>
+                        <div>
+                            <span class="interest-badge">Geodynamic modeling</span>
+                            <span class="interest-badge">Integrated geophysical & geological basin analysis</span>
+                            <span class="interest-badge">Seismic stratigraphy & structural restoration</span>
+                            <span class="interest-badge">Carbonate platform evolution</span>
+                            <span class="interest-badge">Machine learning applications in geophysics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">PhD in Geology / Applied Geophysics</h5>
+                            <p class="timeline-date">2021 – 2025 (Defense expected Nov–Dec 2025)</p>
+                            <p class="card-text"><strong>University of Tunis El Manar – Faculty of Sciences of Tunis</strong></p>
+                            <p class="card-text"><em>Thesis:</em> Application of geophysical methods to the geodynamic study of the junction between the Southern Tunisian Atlas and the Saharan Platform.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Master's Degree in Structural Geology and Geological Modeling</h5>
+                            <p class="timeline-date">2013 – 2015</p>
+                            <p class="card-text"><strong>University of Tunis El Manar, Tunisia</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Master's Degree in Applied Geophysics</h5>
+                            <p class="timeline-date">2011 – 2013</p>
+                            <p class="card-text"><strong>University of Tunis El Manar, Tunisia</strong></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bachelor's Degree in Geology</h5>
+                            <p class="timeline-date">2008 – 2011</p>
+                            <p class="card-text"><strong>University of Tunis El Manar, Tunisia</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">PhD Exchange Programme</h5>
+                            <p class="mb-0">Ruhr-Universität Bochum, Germany</p>
+                            <small>Sep. 2024 – Feb. 2025</small>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><strong>Tasks:</strong> Evolution of the Jerid Basin using well, seismic, and gravity data.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Applied Research Project – Structural Geologist</h5>
+                            <p class="mb-0">Ruhr-Universität Bochum, Germany</p>
+                            <small>Oct. 2022 – May 2023</small>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><strong>Tasks:</strong> Structural and sedimentary analysis to reconstruct basin development along the Southern Tunisian Atlas Front.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Geophysicist / Structural Geologist</h5>
+                            <p class="mb-0">GE03BCN-CSIC, Barcelona, Spain</p>
+                            <small>Sep.-Dec. 2017 & Sep.-Nov. 2018</small>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><strong>Tasks:</strong> Built balanced cross-sections integrating well, seismic, and geological map data; seismic interpretation and structural analysis to investigate basin architecture.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Geophysics Intern</h5>
+                            <p class="mb-0">ETAP - Tunisian Petroleum Activities Enterprise, Tunis, Tunisia</p>
+                            <small>2013 - 2017</small>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><strong>Tasks:</strong> Seismic interpretation, well-log correlation, structural analysis, and prospect identification.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="mb-3">Geophysical Analysis</h4>
+                    <div class="skill-item">
+                        <div class="skill-name">Seismic Interpretation (2D/3D)</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Seismic Mapping</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Structural Modeling</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="mb-3 mt-4">Geological Analysis</h4>
+                    <div class="skill-item">
+                        <div class="skill-name">Basin and Stratigraphic Analysis</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <h4 class="mb-3">Software</h4>
+                    <div class="skill-item">
+                        <div class="skill-name">SMT Kingdom</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Oasis Montaj</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">ArcGIS</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="mb-3 mt-4">Languages</h4>
+                    <div class="skill-item">
+                        <div class="skill-name">Arabic (Native)</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">French (Fluent)</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">English (Advanced)</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">German (Intermediate)</div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Scientific Publications</h2>
+            <div class="publication-item">
+                <p class="publication-title">Manai, D., Inoubli, M.H., Pascal, C., et al. (2025). Tectono-sedimentary evolution of the Southern Atlas front of Tunisia using integrated subsurface data: A case study of the Gantass structure.</p>
+                <p class="mb-1"><em>Journal of Mountain Science, 22: 800-819</em></p>
+                <p class="mb-0">doi:10.1007/s11629-024-9045-6</p>
+            </div>
+            
+            <div class="publication-item">
+                <p class="publication-title">Ghagaoui, M., Sebei, K., Manai, D., et al. (2023). Paleozoic geological evolution of Southeastern Tunisia, North Africa: New insights from subsurface data.</p>
+                <p class="mb-1"><em>Marine and Petroleum Geology, 151: 106185</em></p>
+                <p class="mb-0">doi:10.1016/j.marpetgeo.2023.106185</p>
+            </div>
+            
+            <div class="publication-item">
+                <p class="publication-title">Sebei, K., Amiri, A., Abidi, O., Manai, D., et al. (2022). Growth of late Lower to Upper Cretaceous isolated carbonate platforms: New insights from the Pelagian Sea (Gulf of Hammamet, Tunisia).</p>
+                <p class="mb-1"><em>Journal of African Earth Sciences, 193: 104598</em></p>
+                <p class="mb-0">doi:10.1016/j.jafrearsci.2022.104598</p>
+            </div>
+            
+            <div class="publication-item">
+                <p class="publication-title">Sebei, K., Amiri, A., Abidi, O., Manai, D., et al. (2019). Episodes with reefal formations during the Aptian-Late Cretaceous in the Gulf of Hammamet (Northeastern Tunisia).</p>
+                <p class="mb-1"><em>International Journal of Earth Sciences, 108: 779-797</em></p>
+                <p class="mb-0">doi:10.1007/s00531-019-01678-x</p>
+            </div>
+            
+            <h3 class="mt-5 mb-4">Conferences & Poster Presentations</h3>
+            <div class="conference-item">
+                <p class="publication-title">Manai, D. et al. (2017). An overview of the stratigraphic evolution of the Chotts Basin, Southern Tunisian Atlas.</p>
+                <p class="mb-0"><em>JJCG 2017, Bouznika, Morocco (Poster)</em></p>
+            </div>
+            
+            <div class="conference-item">
+                <p class="publication-title">Manai, D. et al. (2017). Reefs in the Northeastern Offshore Tunisia from the Aptian to Maastrichtian.</p>
+                <p class="mb-0"><em>AGIC 2017, Hammamet, Tunisia (Poster)</em></p>
+            </div>
+            
+            <div class="conference-item">
+                <p class="publication-title">Manai, D. et al. (2016). Identification of reefal constructions within the Cretaceous series of the Gulf of Hammamet.</p>
+                <p class="mb-0"><em>ICAGE 2016, Mahdia, Tunisia (Poster)</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Memberships -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="section-title">Certifications</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Programming for Everybody (Python) - University of Michigan (2021)</li>
+                        <li class="list-group-item">Microsoft Office Specialist (Word, PowerPoint) - Microsoft (2021)</li>
+                        <li class="list-group-item">Teaching Pedagogy Training (2017)</li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-6">
+                    <h2 class="section-title">Professional Memberships</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">COST Action CA23150 – "Pan-European BioGeodynamics Network (EUROBIG)"</h5>
+                            <p class="card-text">2025–2028</p>
+                            <p class="card-text">Member of Working Groups 1 and 3 (participation in collaborative and training activities on geodynamics and applied geophysics across Europe).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <p class="lead">Interested in discussing postdoctoral opportunities or collaborative research?</p>
+                    <div class="contact-info">
+                        <p>
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:daleI.manai@fst.utm.tn">daleI.manai@fst.utm.tn</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+21623947732">+216 23 947 732</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-linkedin me-2"></i>
+                            <a href="https://linkedin.com/in/daleI-manai-0799a658" target="_blank">LinkedIn Profile</a>
+                        </p>
+                    </div>
+                    <a href="mailto:daleI.manai@fst.utm.tn" class="btn btn-primary btn-lg mt-3">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Dalel MANAI. All Rights Reserved.</p>
+            <p>Geophysicist & Structural Geologist | Seeking Postdoctoral Position</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(44, 62, 80, 0.95)';
+            } else {
+                navbar.style.backgroundColor = 'var(--primary-color)';
+            }
+        });
+    </script>
+</body>
+</html>
